@@ -4,51 +4,81 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     
-    <div class="pageOuter">
-        
-        <div class="pageTitle">
-            <h1>RDTEK Projects</h1>
-        </div>
-        
-        <div class="section group">
-            <div class="col span_1_of_2">
-                <div class="gridSquare">
-                    <h4>ECG Tools 
-                        <div class="ghLink">
-                            <a href="https://github.com/rdtek/ECGViewer">GitHub repo</a>
-                        </div>
-                    </h4>
-                    <p>Read and display ECG signal data.</p>
-                    <img src="https://raw.githubusercontent.com/rdtek/ECGViewer/master/win32app/ECGViewerScreenshot.png" />
-                </div>
-                <div class="gridSquare">
-                    <h4>Health Cloud
-                        <div class="ghLink">
-                            <a href="https://github.com/rdtek/HealthCloud">GitHub repo</a>
-                        </div>
-                    </h4>
-                    <p>Record, upload and manage health data between mobile devices and an ASP.Net MVC Web App.</p>
+    <body>
+        <div class="pageContainer">
+            
+            <div class="pageHeader">
+                <h1>RD Projects</h1>
+                
+                <!-- the 'hamburger' menu icon, click to show menu -->
+                <div id="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
-            <div class="col span_1_of_2">
-                <div class="gridSquare">
-                    <h4>Lib EDF
-                        <div class="ghLink">
-                            <a href="https://github.com/rdtek/LibEDF">GitHub repo</a>
-                        </div>
-                    </h4>
-                    <p>Libraries for reading and writing EDF signal files.</p>
+            
+            <!--The mobile navigation Markup hidden via css-->
+            <nav>
+                <ul>
+                    <li><a href="#">menuitem 1</a></li>
+                    <li><a href="#">menuitem 2</a></li>
+                    <li><a href="#">menuitem 3</a></li>
+                    <li><a href="#">menuitem 4</a></li>
+                    <li><a href="#">menuitem 5</a></li>
+                    <li><a href="#">menuitem 6</a></li>
+                </ul>
+            </nav>
+            
+            <!--The Layer that will be layed over the content
+            so that the content is unclickable while menu is shown-->
+            <div id="contentLayer"></div>
+            
+            <div class="pageContent group">
+                <div class="col span_1_of_2">
+                    <div class="gridSquare">
+                        <h4>ECG Tools 
+                            <div class="ghLink">
+                                <a href="https://github.com/rdtek/ECGViewer">Git repo</a>
+                            </div>
+                        </h4>
+                        <p>Read and display ECG signal data.</p>
+                        <img src="https://raw.githubusercontent.com/rdtek/ECGViewer/master/win32app/ECGViewerScreenshot.png" />
+                    </div>
+                    <div class="gridSquare">
+                        <h4>Health Cloud
+                            <div class="ghLink">
+                                <a href="https://github.com/rdtek/HealthCloud">Git repo</a>
+                            </div>
+                        </h4>
+                        <p>Record, upload and manage health data between mobile devices and an ASP.Net MVC Web App.</p>
+                    </div>
                 </div>
-                <div class="gridSquare">
-                    <h4>Mail Client
-                        <div class="ghLink">
-                            <a href="https://github.com/rdtek/MailClient">GitHub repo</a>
-                        </div>
-                    </h4>
-                    <p>Simple command line mail client.</p>
+                <div class="col span_1_of_2">
+                    <div class="gridSquare">
+                        <h4>Lib EDF
+                            <div class="ghLink">
+                                <a href="https://github.com/rdtek/LibEDF">Git repo</a>
+                            </div>
+                        </h4>
+                        <p>Libraries for reading and writing EDF signal files.</p>
+                    </div>
+                    <div class="gridSquare">
+                        <h4>Mail Client
+                            <div class="ghLink">
+                                <a href="https://github.com/rdtek/MailClient">Git repo</a>
+                            </div>
+                        </h4>
+                        <p>Simple command line mail client.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        
+        <!-- Load scripts -->
+        <script   src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+        <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+        <script src="burgermenu.js"></script>
+    </body>
     
 </html>

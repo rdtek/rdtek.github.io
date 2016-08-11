@@ -1,12 +1,15 @@
 body {
+    overflow-x:hidden;
     font-family:Droid Serif,Georgia,serif;
-    margin:0;
-    padding:0;
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    width: 100%;
     background-color:black;
 }
 
 h1 {
-    font-size:32pt;
+    font-size:26pt;
 }
 
 h4 {
@@ -26,13 +29,111 @@ a:visited {
     color: white;
 }
 
+.pageContainer {
+    background-color: #000;
+    /* padding: 52px 10px 10px 10px; */
+    position: relative;
+    width: auto;
+    height: 100%;
+    /*
+    -webkit-box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: -10px 0px 9px 0px rgba(0, 0, 0, 0.4);
+    */
+    }
+
+.pageHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+    font-weight:bold;
+    color:#c0a062;
+    background-color:white;
+}
+
+.pageHeader h1 {
+    float:left;
+    margin:10px 0 10px 5px;
+}
+
+#hamburger {
+    float:right;
+    margin: 16px 10px 10px 10px;
+    border: 1px solid #c0a062;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+    height: 24px;
+    padding: 3px 4px 3px;
+    position: relative;
+    width: 25px;
+    background: #fff;
+}
+ 
+/* The stripes in the hamburger button */
+#hamburger div {
+    background-color: #c0a062;
+    border: 1px solid #c0a062;
+    border-radius: 2px 2px 2px 2px;
+    height: 2px;
+    margin-top: 3px;
+    width: 90%;
+}
+
+nav {
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    z-index: 0;
+    width: 70%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #3e3c3d;
+    background: -moz-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3e3c3d), color-stop(100%, #2d2c2d));
+    background: -webkit-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -o-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: -ms-linear-gradient(top, #3e3c3d 0%, #2d2c2d 100%);
+    background: linear-gradient(to bottom, #3e3c3d 0%, #2d2c2d 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3e3c3d', endColorstr='#2d2c2d', GradientType=0);
+}
+
+.pageContent {
+    width: 100%; 
+    height:100%; 
+    /* overflow-y: scroll; */
+    margin-top: 70px;
+}
+
+/* The Layer that will be layed over the content
+so that the content is unclickable while menu is shown 
+*/
+#contentLayer {
+    display: none;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30%;
+    z-index: 5;
+}
+
 .gridSquare {
     color:white;
     border:4px solid #c0a062;
-    min-height: 240px;
+    height: 240px;
+    overflow:hidden;
     background-color:#0f324e;
     padding:10px;
-    margin:0 0 20px 0;
+    margin:0 0 10px 0;
 }
 
 .gridSquare h4 {
@@ -47,18 +148,6 @@ a:visited {
 .ghLink {
     font-size:10pt;
     float:right;
-}
-
-.pageOuter {
-    margin-top:20px;
-}
-
-.pageTitle {
-    margin:0 0 10px 0;
-    text-align:center;
-    font-weight:bold;
-    color:#c0a062;
-    font-size:28pt;
 }
 
 .section {
