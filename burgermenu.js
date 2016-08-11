@@ -16,15 +16,15 @@ $(document).ready(function () {
 
         console.log('hello');
         
-        $('#content').css('min-height', $(window).height());
+        $('#pageContent').css('min-height', $(window).height());
 
         $('nav').css('opacity', 1);
 
         //set the width of primary content container -> content should not scale while animating
-        var contentWidth = $('#content').width();
+        var contentWidth = $('#pageContent').width();
 
         //set the content with the width that it has originally
-        $('#content').css('width', contentWidth);
+        $('#pageContent').css('width', contentWidth);
 
         //display a layer to disable clicking and scrolling on the content while menu is shown
         $('#contentLayer').css('display', 'block');
@@ -45,16 +45,16 @@ $(document).ready(function () {
     $("#contentLayer").click(function () {
 
         //enable all scrolling on mobile devices when menu is closed
-        $('#pageContainer').unbind('touchmove');
+        $('#pageContainer').off('touchmove');
 
         //set margin for the whole container back to original state with a jquery UI animation
         $("#pageContainer").animate({"marginLeft": ["-1", 'easeOutExpo']}, {
             duration: 700,
             complete: function () {
-                $('#content').css('width', 'auto');
+                $('#pageContent').css('width', 'auto');
                 $('#contentLayer').css('display', 'none');
                 $('nav').css('opacity', 0);
-                $('#content').css('min-height', 'auto');
+                $('#pageContent').css('min-height', 'auto');
 
             }
         });

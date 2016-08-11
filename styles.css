@@ -29,7 +29,7 @@ a:visited {
     color: white;
 }
 
-.pageContainer {
+#pageContainer {
     background-color: #000;
     /* padding: 52px 10px 10px 10px; */
     position: relative;
@@ -122,7 +122,7 @@ so that the content is unclickable while menu is shown
     position: absolute;
     right: 0;
     top: 0;
-    width: 30%;
+    width: 100%;
     z-index: 5;
 }
 
