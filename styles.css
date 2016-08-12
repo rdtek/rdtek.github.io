@@ -177,6 +177,7 @@ so that the content is unclickable while menu is shown
 }
 
 .imageContainer {
+    float:left;
     padding: 10px;
     background-color:white;
     border: 1px solid white;
